@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button-Changing</title>
+    <style>
+      button {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50px;
+        background-color: orange;
+        color: black;
+        font-weight: bold; 
+      }
+      div {
+        width:600px;
+        height:100px;
+        border:1px solid black;
+        padding:5px;
+
+      }
+    </style>
+</head>
+<body>
+    <h1>Text Formatter</h1>
+    <textarea id="textarea" rows="5" cols="100" placeholder="Type Your Text Here..." ></textarea><br><br>
+    <button>Bold</button>
+    <button>Italic</button>
+    <button>Underline</button>
+    <button>Red</button>
+    <button>Green</button>
+    <button>Blue</button>
+    <button>Small</button>
+    <button>Medium</button>
+    <button>Large</button>
+    <button>Clear</button><br><br>
+    <h1>Output:</h1>
+    <div id="output"></div>
+
+    <script>
+        const textarea = document.getElementById("textarea");
+        const buttons = document.querySelectorAll("button");
+        const output = document.getElementById("output");
+        buttons[0].addEventListener("click",function(){
+            output.innerText = textarea.value;
+            output.style.fontWeight = "bold";
+        })
+        buttons[1].addEventListener("click",function(){
+            output.innerText = textarea.value;
+            output.style.fontStyle = "italic";
+        })
+         buttons[2].addEventListener("click",function(){
+            output.innerText = textarea.value;
+            output.style.textDecoration = "underline";
+        })
+        buttons[3].addEventListener("click",function(){
+           output.innerText = textarea.value;
+            output.style.color = "red";
+        }) 
+        buttons[4].addEventListener("click",function(){
+           output.innerText = textarea.value;
+            output.style.color = "green";
+        }) 
+        buttons[5].addEventListener("click",function(){
+           output.innerText = textarea.value;
+            output.style.color = "blue";
+        }) 
+        buttons[6].addEventListener("click",function(){
+           output.innerText = textarea.value;
+            output.style.fontSize = "12px";
+        }) 
+        buttons[7].addEventListener("click",function(){
+           output.innerText = textarea.value;
+            output.style.fontSize = "16px";
+        }) 
+        buttons[8].addEventListener("click",function(){
+           output.innerText = textarea.value;
+            output.style.fontSize = "24px";
+        }) 
+        buttons[9].addEventListener("click",function(){
+           output.innerText = "";
+            
+        }) 
+    </script>
+</body>
+</html>
+
